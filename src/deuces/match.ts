@@ -11,6 +11,11 @@ class Turn {
 class Match {
   turns: Turn[];
   winner: null | Player;
+  
+
+  get isOver() {
+    return !!this.winner;
+  }
 
   constructor(players: Player[]) {
     this.turns = [];
