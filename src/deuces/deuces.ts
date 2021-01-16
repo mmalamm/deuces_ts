@@ -11,7 +11,7 @@ class Game {
   }
 
   startMatch() {
-    if (this.currentMatch?.isOver) {
+    if (this.currentMatch?.isOver || !this.currentMatch) {
       this.matches.push(new Match(this.players));
       return this.currentMatch;
     } else {
